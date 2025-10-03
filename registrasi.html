@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Akun - Mentor-Ku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ["Inter", "system-ui", "sans-serif"],
+                    },
+                    animation: {
+                        "fade-in-up": "fadeInUp 0.8s ease-out",
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            "0%": { opacity: "0", transform: "translateY(20px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { font-family: "Inter", sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #43a0a0 0%, #2a52be 100%); }
+        .gradient-text {
+            background: linear-gradient(135deg, #43a0a0 0%, #2a52be 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-whiterounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <img src="logoo.png" alt="Ikon Mentor-Ku" class="w-8 h-8 object-contain" />
+                    </div>
+                    <span class="font-bold text-2xl gradient-text">Mentor-Ku</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="dashboard.html" class="text-gray-600 hover:text-blue-700 font-semibold transition-colors">Masuk</a>
+                    <a href="registrasi.html" class="gradient-bg text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all font-semibold transform hover:scale-105">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <div class="text-center animate-fade-in-up">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Buat Akun Baru</h1>
+                <p class="mt-2 text-md text-gray-600">Mulai perjalananmu untuk menjadi lebih hebat bersama mentor terbaik.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-xl animate-fade-in-up" style="animation-delay: 0.1s;">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="nama-lengkap" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                        <input type="text" id="nama-lengkap" placeholder="Masukkan nama lengkapmu" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Alamat Email</label>
+                        <input type="email" id="email" placeholder="contoh@email.com" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi</label>
+                        <input type="password" id="password" placeholder="Minimal 8 karakter" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="konfirmasi-password" class="block text-sm font-medium text-gray-700">Konfirmasi Kata Sandi</label>
+                        <input type="password" id="konfirmasi-password" placeholder="Ulangi kata sandi" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div class="pt-2">
+                        <button type="submit" class="w-full gradient-bg text-white py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-bold hover:opacity-90 transition-opacity transform hover:scale-105 focus:outline-none">
+                            Daftar
+                        </button>
+                    </div>
+
+                    <div class="text-center text-sm text-gray-600">
+                        <p>
+                            Sudah punya akun? 
+                            <a href="dashboard.html" class="font-medium text-blue-700 hover:text-blue-600 underline">
+                                Masuk di sini
+                            </a>
+                        </p>
+                    </div>
+                </form>
+                <div class="relative my-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white text-gray-500">atau lanjutkan dengan</span>
+                    </div>
+                </div>
+
+                <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <a href="#" class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-all transform hover:scale-105 focus:outline-none">
+                        <svg class="w-5 h-5 mr-3" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                            <path fill="currentColor" d="M488 261.8C488 403.3 381.5 512 244 512 110.1 512 0 401.9 0 265.9 0 129.9 110.1 20 244 20c69.1 0 125.3 27.8 172.4 72.4l-66 66C314.6 118.5 282.5 102 244 102c-84.3 0-151.8 67.5-151.8 151.8s67.5 151.8 151.8 151.8c90.1 0 128.8-60.7 133.7-93.1H244v-75.5h236.1c2.4 12.7 3.9 26.9 3.9 41.4z"></path>
+                        </svg>
+                        Daftar dengan Google
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
